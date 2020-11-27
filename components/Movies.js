@@ -44,7 +44,7 @@ const MovieCard = styled.View`
 
 const Movies = ({label, items}) => {
 
-  //const props = useSpring({to:{opacity:0},from:{opacity:1},delay:3000, config:{duration:1000} })
+  const props = useSpring({to:{opacity:0},from:{opacity:1},delay:3000, config:{duration:1000} })
 
 
   const translate = useSpring({to: {
@@ -55,7 +55,7 @@ const Movies = ({label, items}) => {
                                     })
 
   const arrayConfMola = items.map((element, index)=>{
-    return ({from: {opacity:1}, to: {opacity: 0}, delay: index*1000})
+    return ({from: {opacity:1}, to: {opacity: 0}, delay: index*2000})
   })
 
   const springs = useSprings(4, arrayConfMola);
